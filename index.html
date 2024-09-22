@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PH Assignment 5</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+<script src="https://cdn.tailwindcss.com"></script>
+
+<style>
+
+
+    .sticky-top {
+      position: -webkit-sticky; 
+      position: sticky;
+      top: 0;
+      z-index: 50;
+    }
+
+    .sticky-buttons {
+      position: -webkit-sticky; 
+      position: sticky;
+      top: 80px; 
+      z-index: 60; 
+    }
+   
+    </style>
+</head>
+<body >
+  
+<header class="sticky top-0">
+
+ <!-- NavBar -->
+ <nav class="sticky-top bg-blue-300 shadow-lg">
+    <div class="flex justify-between items-center px-4 py-3 lg:px-8">
+      
+      <!--  Blog Button -->
+      <div class="flex-shrink-0">
+        <button class="btn btn-primary bg-lime-400 text-black border-none" id="blog-btn">
+          Blog
+        </button>
+      </div>
+      
+      <!--  Donate Bangladesh -->
+      <div class="flex items-center space-x-2">
+        <img src="./assets/logo.png" alt="Donate Icon" class="w-6 h-6">
+        <span class="font-bold text-lg">Donate Bangladesh</span>
+      </div>
+
+      <!-- Donation Amount -->
+      <div class="flex items-center space-x-2">
+        <img src="./assets/coin.png" alt="">
+    
+        <span class="font-semibold">5500 BDT</span>
+      </div>
+      
+    </div>
+  </nav>
+
+
+  <div class="sticky-buttons bg-gray-200/25 shadow-md py-3 px-4 flex justify-center space-x-4 ">
+    <!-- Donation Button -->
+    <button class="btn bg-lime-400 text-black border-none">
+      Donation
+    </button>
+    <!-- History Button -->
+    <button class="btn bg-white border border-gray-300 text-black">
+      History
+    </button>
+  </div>
+</header>
+
+
+    <main class=" w-11/12 mx-auto mt-16 ">
+       
+        <!-- donation container  cards -->
+  <div class="container mx-auto p-4 grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-1 gap-6 ">
+  
+      
+      <!-- First Card -->
+    <div class="grid grid-cols-1 lg:grid-cols-2 bg-white rounded-lg shadow-lg p-4 border-2 ">
+      <div >
+        <img src="./assets/noakhali.png" alt="Noakhali" class="max-w-md rounded-md">
+      </div>
+        <div class="p-4 ">
+          <div >
+            <span class="text-yellow-500">&#x1F4B0; 1800 BDT</span>
+          </div>
+                
+          <h2 class="text-xl font-bold my-2">Donate for Flood at Noakhali, Bangladesh</h2>
+          <p class="text-gray-600">
+            The recent floods in Noakhali have caused significant damage to homes and infrastructure. Your donation will help provide essential supplies and support the relief efforts.
+          </p>
+          <input type="number" placeholder="Write Donation Amount" class="input input-bordered w-full mt-4">
+          <button class="btn bg-lime-400 text-black border-none w-full mt-4">Donate Now</button>
+        
+        </div>
+        </div>
+      
+
+      <!-- Second Card -->
+       <div class="grid grid-cols-1 lg:grid-cols-2 bg-white rounded-lg shadow-lg p-4 border-2">
+
+     
+      <div >
+     
+        <img src="./assets/feni.png" alt="feni" class="max-w-md rounded-md">
+        </div>
+        <div class="p-4 ">
+          <div >
+            <span class="text-yellow-500">&#x1F4B0; 600 BDT</span>
+          </div>
+          <h2 class="text-xl font-bold my-2">Donate for Cyclone Relief, Bangladesh</h2>
+          <p class="text-gray-600">
+            Cyclones have devastated coastal areas. Your contribution will help provide shelter and food supplies to the affected communities.
+          </p>
+          <input type="number" placeholder="Write Donation Amount" class="input input-bordered w-full mt-4">
+          <button class="btn bg-lime-400 text-black border-none w-full mt-4">Donate Now</button>
+       
+   
+    </div>
+      </div>
+       </div>
+
+
+      <!-- Third Card -->
+      <div class="grid grid-cols-1 lg:grid-cols-2 bg-white rounded-lg shadow-lg p-4 border-2">
+      <div >
+        <img src="./assets/quota-protest.png" alt="quota-protest" class="max-w-md rounded-md">
+      </div>
+        <div class="p-4">
+          <div class="flex items-center justify-between">
+            <span class="text-yellow-500">&#x1F4B0; 2400 BDT</span>
+          </div>
+          <h2 class="text-xl font-bold my-2">Aid for Injured in the Quota Movement</h2>
+          <p class="text-gray-600">
+            The recent Quota movement has resulted in numerous injuries and significant hardship for many individuals. Your support is crucial in providing medical assistance, rehabilitation, and necessary supplies to those affected. By contributing, you help ensure that injured individuals receive the care and support they need during this challenging time. Every donation plays a vital role in alleviating their suffering and aiding in their recovery. Please consider making a donation to support these brave individuals in their time of need.
+          </p>
+          <input type="number" placeholder="Write Donation Amount" class="input input-bordered w-full mt-4">
+          <button class="btn bg-lime-400 text-black border-none w-full mt-4">Donate Now</button>
+        </div>
+   
+
+    </div>
+  </div>
+            
+    </main>
+  
+  
+  
+    <script src="index.js"></script>
+</body>
+</html>

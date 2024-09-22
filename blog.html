@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+
+    <style>
+       
+       
+       
+       
+           /* Custom styles for sticky elements */
+           .sticky-top {
+             position: -webkit-sticky; /* For Safari */
+             position: sticky;
+             top: 0;
+             z-index: 50;
+           }
+       
+           .sticky-buttons {
+             position: -webkit-sticky; /* For Safari */
+             position: sticky;
+             top: 80px; /* Below the navbar */
+             z-index: 60; /* Buttons should be below the navbar */
+           }
+          
+           </style>
+           <script src="https://cdn.tailwindcss.com"></script>
+           <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+       <script src="https://cdn.tailwindcss.com"></script>
+           
+
+</head>
+<body>
+
+    <header class="sticky top-0">
+
+        <nav class="sticky-top bg-base-200 shadow-lg">
+           <div class="flex justify-between items-center px-4 py-3 lg:px-8">
+             
+   
+             <div class="flex-shrink-0">
+               <button class="btn btn-primary ◀  bg-lime-400 text-black border-none" id="home-btn">
+                 Home
+               </button>
+             </div>
+             
+
+             <div class="flex items-center space-x-2">
+               <img src="./assets/logo.png" alt="Donate Icon" class="w-6 h-6">
+               <span class="font-bold text-lg">Donate Bangladesh</span>
+             </div>
+       
+     
+             <div class="flex items-center space-x-2">
+               <img src="./assets/coin.png" alt="">
+              
+               <span class="font-semibold">5500 BDT</span>
+             </div>
+             
+           </div>
+         </nav>
+    </header>
+
+
+   
+<main class="w-11/12 mx-auto mt-10">
+   
+<div class="m-5">
+    <h1 class="font-bold text-4xl">Important FAQ  <i class="fa-solid fa-question">!!</i> </h1>
+    
+</div>
+
+<div class="join join-vertical w-full">
+    <div class="collapse collapse-arrow join-item border-base-300 border">
+      <input type="radio" name="my-accordion-4" checked="checked" />
+      <div class="collapse-title text-xl font-medium">What is the Document Object Model (DOM)?</div>
+      <div class="collapse-content">
+        <p>The DOM is like a blueprint of a webpage. It turns everything on a page (text, images, elements) into objects that JavaScript can interact with. This lets anyone change what users see and how they interact with the page, like updating text or responding to button clicks.</p>
+      </div>
+    </div>
+    <div class="collapse collapse-arrow join-item border-base-300 border">
+      <input type="radio" name="my-accordion-4" />
+      <div class="collapse-title text-xl font-medium">How do you select an element from the DOM?</div>
+      <div class="collapse-content">
+        <p>
+            By id: document.getElementById('id') By class: document.getElementsByClassName('class')
+            By tag: document.getElementsByTagName('tag')
+            Or using CSS selectors: document.querySelector('selector') (for the first match) or document.querySelectorAll('selector') (for all matches).
+        </p>
+      </div>
+    </div>
+    <div class="collapse collapse-arrow join-item border-base-300 border">
+      <input type="radio" name="my-accordion-4" />
+      <div class="collapse-title text-xl font-medium">What is event delegation in the context of the DOM, and why is it useful?</div>
+      <div class="collapse-content">
+        <p>Event delegation is when someone listen for an event (like a click) on a parent element, but handle it for its child elements. It's useful because it doesn't need to attach separate listeners to each child element, which saves memory and works great for dynamically added content.</p>
+      </div>
+    </div>
+    <div class="collapse collapse-arrow join-item border-base-300 border">
+      <input type="radio" name="my-accordion-4" />
+      <div class="collapse-title text-xl font-medium">How do you manipulate an element's attributes and styles using the DOM?</div>
+      <div class="collapse-content">
+        <p>To change attributes: element.setAttribute('attr', 'value') or element.removeAttribute('attr').
+            To style: element.style.property = 'value' (like element.style.color = 'blue').
+            Or use classList to add/remove/toggle classes: element.classList.add('class').</p>
+      </div>
+    </div>
+</div>
+</main>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="./blog.js"></script>
+</body>
+</html>
