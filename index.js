@@ -42,10 +42,19 @@ function addToHistory(location, amount) {
     let currentBalance = parseFloat(balanceElement.textContent.split(' ')[0]);
   
 
-    const newBalance = currentBalance - donationAmount;
-  
-    // new balance
-    balanceElement.textContent = formatCurrency(newBalance);
+    
+
+// Declaring a new variable to store the new balance
+ const newBalance = currentBalance - donationAmount;
+ if (newBalance < 0) {
+   alert('You do not have enough balance to donate!');
+ 
+   }
+   else {
+     // new balance
+     balanceElement.textContent = formatCurrency(newBalance);
+   }
+ 
   }
 
 
