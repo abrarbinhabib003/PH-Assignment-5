@@ -18,6 +18,41 @@ function getInputValueById(id) {
   let donationCount = 0;
 
 
+  
+//Tab Switching
+const historyTab = document.getElementById("history-tab");
+const donateTab = document.getElementById("donate-tab");
+historyTab.addEventListener("click", function () {
+
+
+
+  document.getElementById("donation-section").classList.add("hidden");
+  document.getElementById("history-section").classList.remove("hidden");
+});
+
+donateTab.addEventListener("click", function () {
+   
+
+  document.getElementById("donation-section").classList.remove("hidden");
+  document.getElementById("history-section").classList.add("hidden");
+});
+
+
+
+ 
+
+ 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
 
 
 
