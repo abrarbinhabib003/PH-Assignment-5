@@ -60,7 +60,7 @@ document.getElementById('donate-noakhali').addEventListener('click', function() 
 document.getElementById('donate-sylhet').addEventListener('click', function() {
     const donationAmount = getInputValueById('donation-input-sylhet');
     const totalAmountElement = document.getElementById('amount-sylhet');
-    const location = "Flood in Sylhet";
+    const location = "Donate for Flood at Sylhet,Bangladesh";
   
     if (donationAmount > 0) {
       const currentAmount = parseFloat(totalAmountElement.textContent.split(' ')[1]);
@@ -74,11 +74,38 @@ document.getElementById('donate-sylhet').addEventListener('click', function() {
     }
   });
   
- 
-  //  modal close
+
+//  modal close
 document.getElementById('close-confirmation').addEventListener('click', function() {
     document.getElementById('congrats-modal').classList.add('hidden');
   });
+
+  //  Quota
+  document.getElementById('donate-quota').
+  addEventListener('click', function() {
+      const donationAmount = getInputValueById
+  ('donation-input-quota');
+      const totalAmountElement = document.
+  getElementById('amount-quota');
+      const location = "Donate for Quota Movement at Bangladesh";
+    
+      if (donationAmount > 0) {
+        const currentAmount = parseFloat
+  (totalAmountElement.textContent.split(' ')
+  [1]);
+        totalAmountElement.innerText = `💰 $
+  {formatCurrency(currentAmount + 
+  donationAmount)}`;
+        addToHistory(location, donationAmount);
+    
+        // Show modal
+        document.getElementById('congrats-modal').
+  classList.remove('hidden');
+      } else {
+        alert('Please enter a valid donation amount!');
+      }
+    });
+
 
 //Tab Switching
 const historyTab = document.getElementById("history-tab");
