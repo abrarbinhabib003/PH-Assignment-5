@@ -29,8 +29,6 @@ function addToHistory(location, amount) {
     historyItem.className = 'bg-white p-3 rounded-md border-l-2  shadow-xl mb-3 w-full';
   
     historyItem.innerHTML = `
-     
-     
       <p class="text-lg font-semibold "> ${formatCurrency(amount)} Taka is Donated for  ${location} </p>
       <p class="text-md ">Date: ${formatDateTime(new Date())}</p>
     `;
@@ -38,6 +36,19 @@ function addToHistory(location, amount) {
     const historyContainer = document.getElementById('history-list');
     historyContainer.insertBefore(historyItem, historyContainer.firstChild);
   }
+  //  update Current  balance 
+  function updateBalance(donationAmount) {
+    const balanceElement = document.getElementById('total-balance');
+    let currentBalance = parseFloat(balanceElement.textContent.split(' ')[0]);
+  
+
+    const newBalance = currentBalance - donationAmount;
+  
+    // new balance
+    balanceElement.textContent = formatCurrency(newBalance);
+  }
+
+
  //  Noakhali
 document.getElementById('donate-noakhali').addEventListener('click', function() {
     const donationAmount = getInputValueById('donation-input-noakhali');
@@ -48,7 +59,11 @@ document.getElementById('donate-noakhali').addEventListener('click', function() 
       const currentAmount = parseFloat(totalAmountElement.textContent.split(' ')[1]);
       totalAmountElement.innerText = `💰 ${formatCurrency(currentAmount + donationAmount)}`;
       addToHistory(location, donationAmount);
-  
+  // Updating Balance
+  updateBalance(donationAmount);
+  // Clear the input field
+  document.getElementById('donation-input-noakhali').value = '';
+
       // Show modal
       document.getElementById('congrats-modal').classList.remove('hidden');
     } else {
@@ -66,7 +81,11 @@ document.getElementById('donate-sylhet').addEventListener('click', function() {
       const currentAmount = parseFloat(totalAmountElement.textContent.split(' ')[1]);
       totalAmountElement.innerText = `💰 ${formatCurrency(currentAmount + donationAmount)}`;
       addToHistory(location, donationAmount);
-  
+  // Updating balance
+  updateBalance(donationAmount);
+  // Clear the input field
+  document.getElementById('donation-input-sylhet').value = '';
+
       // Show modal
       document.getElementById('congrats-modal').classList.remove('hidden');
     } else {
@@ -81,22 +100,21 @@ document.getElementById('close-confirmation').addEventListener('click', function
   });
 
   //  Quota
-  document.getElementById('donate-quota').
-  addEventListener('click', function() {
-      const donationAmount = getInputValueById
-  ('donation-input-quota');
-      const totalAmountElement = document.
-  getElementById('amount-quota');
-      const location = "Donate for Quota Movement at Bangladesh";
+  document.getElementById('donate-quota').addEventListener('click', function() {
+      const donationAmount = getInputValueById('donation-input-quota');
+      const totalAmountElement = document.getElementById('amount-quota');
+      const location = "Aid for Injured in the Quota Movement";
     
       if (donationAmount > 0) {
-        const currentAmount = parseFloat
-  (totalAmountElement.textContent.split(' ')
-  [1]);
-        totalAmountElement.innerText = `💰 $
-  {formatCurrency(currentAmount + 
-  donationAmount)}`;
-        addToHistory(location, donationAmount);
+        const currentAmount = parseFloat(totalAmountElement.textContent.split(' ')[1]);
+        totalAmountElement.innerText = `💰 ${formatCurrency(currentAmount +  donationAmount)}`;
+
+      addToHistory(location, donationAmount);
+    // Updating balance
+    updateBalance(donationAmount);
+    // Clear the input field
+    document.getElementById('donation-input-quota').value = '';
+
     
         // Show modal
         document.getElementById('congrats-modal').
@@ -112,13 +130,30 @@ const historyTab = document.getElementById("history-tab");
 const donateTab = document.getElementById("donate-tab");
 historyTab.addEventListener("click", function () {
 
+    historyTab.classList.add(
+        "text-black",
+ "bg-lime-400" );
+    //   historyTab.classList.remove("text-gray-600");
+      donateTab.classList.remove(
+        "text-black",
+"bg-lime-400" );
+      donateTab.classList.add("text-black");
 
 
-  document.getElementById("donation-section").classList.add("hidden");
+document.getElementById("donation-section").classList.add("hidden");
   document.getElementById("history-section").classList.remove("hidden");
 });
 
 donateTab.addEventListener("click", function () {
+
+    donateTab.classList.add(
+        "text-black",
+       
+       "bg-lime-400");
+
+      historyTab.classList.remove(
+        "text-black",
+"bg-lime-400");
    
 
   document.getElementById("donation-section").classList.remove("hidden");
