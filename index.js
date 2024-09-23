@@ -3,7 +3,7 @@ document.getElementById('blog-btn').addEventListener('click', function () {
         window.location.href = '/blog.html';
     });
 
-
+// 
 // Content Functionality
 function getInputValueById(id) {
     return parseFloat(document.getElementById(id).value);
