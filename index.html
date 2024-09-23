@@ -37,7 +37,7 @@
       
       <!--  Blog Button -->
       <div class="flex-shrink-0">
-        <button class="btn btn-primary bg-lime-400 text-black border-none" id="blog-btn">
+        <button class="btn btn-primary btn-lg bg-lime-400 hover:bg-white text-black border-none" id="blog-btn">
           Blog
         </button>
       </div>
@@ -52,7 +52,7 @@
       <div class="flex items-center space-x-2">
         <img src="./assets/coin.png" alt="">
     
-        <span class="font-semibold">5500 BDT</span>
+        <span id="total-balance" class="font-semibold">5500 BDT</span>
       </div>
       
     </div>
@@ -61,46 +61,49 @@
 
   <div class="sticky-buttons bg-gray-200/25 shadow-md py-3 px-4 flex justify-center space-x-4 ">
     <!-- Donation Button -->
-    <button class="btn bg-lime-400 text-black border-none">
+    <button class="btn bg-lime-400 text-black border-none" id="donate-btn">
       Donation
     </button>
     <!-- History Button -->
-    <button class="btn bg-white border border-gray-300 text-black">
+    <button class="btn bg-white border border-gray-300 text-black" id="history-btn">
       History
     </button>
   </div>
 </header>
 
 
-    <main class=" w-11/12 mx-auto mt-16 ">
+    <main id="donation-section" class=" w-11/12 mx-auto mt-16 ">
        
         <!-- donation container  cards -->
   <div class="container mx-auto p-4 grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-1 gap-6 ">
   
       
       <!-- First Card -->
-    <div class="grid grid-cols-1 lg:grid-cols-2 bg-white rounded-lg shadow-lg p-4 border-2 ">
+    <div id="card-noakhali" class="grid grid-cols-1 lg:grid-cols-2 bg-white rounded-lg shadow-lg p-4 border-2 ">
       <div >
         <img src="./assets/noakhali.png" alt="Noakhali" class="max-w-md rounded-md">
       </div>
         <div class="p-4 ">
-          <div >
-            <span class="text-yellow-500">&#x1F4B0; 1800 BDT</span>
+          <div class="max-w-40 bg-base-200">
+           
+            <span id="amount-noakhali" class="text-yellow-500 font-bold">&#x1F4B0; 1800 BDT</span>
           </div>
                 
           <h2 class="text-xl font-bold my-2">Donate for Flood at Noakhali, Bangladesh</h2>
           <p class="text-gray-600">
             The recent floods in Noakhali have caused significant damage to homes and infrastructure. Your donation will help provide essential supplies and support the relief efforts.
           </p>
-          <input type="number" placeholder="Write Donation Amount" class="input input-bordered w-full mt-4">
-          <button class="btn bg-lime-400 text-black border-none w-full mt-4">Donate Now</button>
+          <input  id="donation-input-noakhali" type="number" placeholder="Write Donation Amount" class="input input-bordered w-full mt-4 ">
+          <button id="donate-noakhali" class="btn bg-lime-400 text-black border-none w-full mt-4">Donate Now</button>
         
         </div>
         </div>
-      
+        <p id="logic-error" class="text-red-500 mt-4 hidden text-center">
+          ⚠️ Invalid Input!
+        </p>
 
       <!-- Second Card -->
-       <div class="grid grid-cols-1 lg:grid-cols-2 bg-white rounded-lg shadow-lg p-4 border-2">
+       <div id="card-sylhet" class="grid grid-cols-1 lg:grid-cols-2 bg-white rounded-lg shadow-lg p-4 border-2">
 
      
       <div >
@@ -108,43 +111,85 @@
         <img src="./assets/feni.png" alt="feni" class="max-w-md rounded-md">
         </div>
         <div class="p-4 ">
-          <div >
-            <span class="text-yellow-500">&#x1F4B0; 600 BDT</span>
+          <div class="max-w-40 bg-base-200" >
+            <span id="amount-sylhet" class="text-yellow-500 font-bold">&#x1F4B0; 600 BDT</span>
           </div>
           <h2 class="text-xl font-bold my-2">Donate for Cyclone Relief, Bangladesh</h2>
           <p class="text-gray-600">
             Cyclones have devastated coastal areas. Your contribution will help provide shelter and food supplies to the affected communities.
           </p>
-          <input type="number" placeholder="Write Donation Amount" class="input input-bordered w-full mt-4">
-          <button class="btn bg-lime-400 text-black border-none w-full mt-4">Donate Now</button>
+          <input id="donation-input-sylhet" type="number" placeholder="Write Donation Amount" class="input input-bordered w-full mt-4  ">
+          <button id="donate-sylhet" class="btn bg-lime-400 text-black border-none w-full mt-4">Donate Now</button>
        
    
     </div>
       </div>
        </div>
-
+       <p id="logic-error" class="text-red-500 mt-4 hidden text-center">
+        ⚠️ Invalid Input!
+      </p>
 
       <!-- Third Card -->
-      <div class="grid grid-cols-1 lg:grid-cols-2 bg-white rounded-lg shadow-lg p-4 border-2">
+      <div id="card-quota" class="grid grid-cols-1 lg:grid-cols-2 bg-white rounded-lg shadow-lg p-4 border-2">
       <div >
         <img src="./assets/quota-protest.png" alt="quota-protest" class="max-w-md rounded-md">
       </div>
         <div class="p-4">
-          <div class="flex items-center justify-between">
-            <span class="text-yellow-500">&#x1F4B0; 2400 BDT</span>
+          <div class="flex items-center justify-between bg-base-200 max-w-40">
+            <div class=" ">
+
+          <span id="amount-quota"  class="text-yellow-500 font-bold ">&#x1F4B0; 2400 BDT</span> 
+        </div>
           </div>
           <h2 class="text-xl font-bold my-2">Aid for Injured in the Quota Movement</h2>
           <p class="text-gray-600">
             The recent Quota movement has resulted in numerous injuries and significant hardship for many individuals. Your support is crucial in providing medical assistance, rehabilitation, and necessary supplies to those affected. By contributing, you help ensure that injured individuals receive the care and support they need during this challenging time. Every donation plays a vital role in alleviating their suffering and aiding in their recovery. Please consider making a donation to support these brave individuals in their time of need.
           </p>
-          <input type="number" placeholder="Write Donation Amount" class="input input-bordered w-full mt-4">
-          <button class="btn bg-lime-400 text-black border-none w-full mt-4">Donate Now</button>
+          <input id="donation-input-quota" type="number" placeholder="Write Donation Amount" class="input input-bordered w-full mt-4  ">
+          <button id="donate-quota" class="btn bg-lime-400 text-black border-none w-full mt-4">Donate Now</button>
+        
         </div>
    
 
     </div>
   </div>
-            
+   <!-- Error Messages -->
+ <p id="logic-error" class="text-red-500 mt-4 hidden text-center">
+  ⚠️ Invalid Input!
+</p>
+
+          
+          <!-- History Section -->
+          <div
+          id="history-section"
+          class="bg-gradient-to-br hidden from-blue-50 to-purple-50 p-4 rounded-lg shadow-md border 
+border-blue-200"
+        >
+          <h3
+            class="text-lg font-semibold mb-4 text-center text-transparent bg-clip-text bg-gradient-to-r 
+from-blue-600 to-purple-600"
+          >
+            🕒 Expense History
+          </h3>
+          <div id="history-list" class="grid grid-cols-2 gap-3"></div>
+        </div>
+      </div>
+
+<!-- Modal (Hidden by default) -->
+<div id="congrats-modal" class="hidden bg-white p-8 rounded-lg shadow-lg text-center fixed inset-0 z-50 flex justify-center items-center bg-black bg-opacity-50">
+  <div class="bg-white p-6 rounded-md shadow-md max-w-lg ">
+    <h3 class="text-2xl font-bold">Congrats!</h3>
+    <div>
+      <img src="./assets/coin.png" alt="Congrats" class="w-10 h-10 mx-auto mt-4 flex justify-center items-center">
+    </div>
+    <p class="mt-2">You have  donated for humankind.</p>
+    <span class="font-bold">successfully</span><br>
+    <button id="close-confirmation" class="btn bg-lime-400 mt-4">Close</button>
+  </div>
+</div>
+
+
+
     </main>
   
   
