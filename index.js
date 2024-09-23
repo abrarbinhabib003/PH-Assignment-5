@@ -125,7 +125,7 @@ document.getElementById('close-confirmation').addEventListener('click', function
     });
 
 
-//Tab Switching
+//Tab 
 const historyTab = document.getElementById("history-tab");
 const donateTab = document.getElementById("donate-tab");
 historyTab.addEventListener("click", function () {
@@ -133,7 +133,7 @@ historyTab.addEventListener("click", function () {
     historyTab.classList.add(
         "text-black",
  "bg-lime-400" );
-    //   historyTab.classList.remove("text-gray-600");
+
       donateTab.classList.remove(
         "text-black",
 "bg-lime-400" );
